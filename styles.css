@@ -1,3 +1,10 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -5,21 +12,21 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 /* Header (Top Left) */
 .header {
     position: absolute;
-    top: 20px;
+    top: 40px; /* Adjusted for iPhone 13 */
     left: 20px;
     text-align: left;
 }
 
 .header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 24px; /* Slightly larger for better readability */
     color: #333;
 }
 
@@ -32,9 +39,9 @@ body {
 /* Pulsing Circle (Center) */
 .pulsing-circle {
     position: relative;
-    margin: 40px auto; /* Centers the circle vertically */
-    width: 120px;
-    height: 120px;
+    margin: 60px auto; /* Adjusted for iPhone 13 */
+    width: 150px; /* Larger for better visibility */
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,8 +49,8 @@ body {
 
 /* Static Clear Circle */
 .static-circle {
-    width: 80px;
-    height: 80px;
+    width: 100px; /* Larger for better visibility */
+    height: 100px;
     background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
     border-radius: 50%;
     display: flex;
@@ -54,7 +61,7 @@ body {
 
 .static-circle span {
     color: #333; /* Dark text for contrast */
-    font-size: 18px;
+    font-size: 20px; /* Larger for better readability */
     font-weight: bold;
 }
 
@@ -72,7 +79,7 @@ body {
 
 /* Dynamic Clock */
 #clock {
-    font-size: 32px;
+    font-size: 36px; /* Larger for better visibility */
     font-weight: bold;
     color: #333;
     margin: 20px 0; /* Adds space around the clock */
@@ -84,18 +91,19 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 300px;
+    width: 100%; /* Full width for better use of screen space */
+    max-width: 350px; /* Limits width for better readability */
     text-align: center;
     margin-top: 20px; /* Adds space between the circle and content */
 }
 
 .ticket-info {
-    font-size: 16px;
+    font-size: 18px; /* Larger for better readability */
     color: #333;
 }
 
 .ticket-info p {
-    margin: 5px 0;
+    margin: 10px 0; /* Adds more space between lines */
 }
 
 /* Pulse Animation */
